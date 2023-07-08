@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 907eba195d44d504b90e47610fe140d3, type: 3}
+  m_Name: MaterialPrueba
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: b9163826e0a323442bbab1c4c7687560, type: 2}
+  emissionsColors:
+  - {r: 0.26099145, g: 0.6509434, b: 0.608369, a: 1}
+  - {r: 0.8784314, g: 0.6348436, b: 0.2588236, a: 1}
+  - {r: 0.754717, g: 0.24563903, b: 0.24563903, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
