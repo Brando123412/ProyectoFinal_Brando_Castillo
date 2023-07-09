@@ -16,8 +16,15 @@ public class PlayerController : MonoBehaviour
     /*void Start(){
         mygrafo.SeleccionCamino1(gameObject);
     }*/
-    public void GoToNode(MyGrafo mygrafo){
-        mygrafo.SeleccionCamino1(gameObject);
+    public void GoToNode(MyGrafo mygrafo, SaveTropas value){
+        if(value.faseSelecction==0){
+            mygrafo.SeleccionCamino1(gameObject);
+        }else if(value.faseSelecction==1){
+            mygrafo.SeleccionCamino2(gameObject);
+        }else if(value.faseSelecction==2){
+            mygrafo.SeleccionCamino3(gameObject);
+        }
+        
     }
     void Update(){
         transform.LookAt(vectorToMove, Vector3.zero);

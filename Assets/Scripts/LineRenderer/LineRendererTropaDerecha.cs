@@ -9,34 +9,30 @@ public class LineRendererTropaDerecha : MonoBehaviour
     void Awake(){
         lineRenderer= GetComponent<LineRenderer>();
     }
-    void Start()
-    {
-        LineDerechaEtapa3();
-        //LineDerechaEtapa2();
-        //LineDerechaEtapa1();
-    }
 
-    void LineDerechaEtapa3(){
+    public void LineDerechaEtapa3(){
         lineRenderer.positionCount = 3;
-        lineRenderer.SetPosition(0 , myGrafo.allNode.GetNodeAtPosition(0).transform.position); 
-        lineRenderer.SetPosition(1 , myGrafo.allNode.GetNodeAtPosition(2).transform.position); 
-        lineRenderer.SetPosition(2 , myGrafo.allNode.GetNodeAtPosition(3).transform.position); 
+        lineRenderer.SetPosition(0 , new Vector3(myGrafo.allNode.GetNodeAtPosition(0).transform.position.x,-0.25f,myGrafo.allNode.GetNodeAtPosition(0).transform.position.z)); 
+        lineRenderer.SetPosition(1 , new Vector3(myGrafo.allNode.GetNodeAtPosition(2).transform.position.x,-0.25f,myGrafo.allNode.GetNodeAtPosition(2).transform.position.z)); 
+        lineRenderer.SetPosition(2 , new Vector3(myGrafo.allNode.GetNodeAtPosition(3).transform.position.x,-0.25f,myGrafo.allNode.GetNodeAtPosition(3).transform.position.z)); 
     }
-    void LineDerechaEtapa2(){
+    public void LineDerechaEtapa2(){
         lineRenderer.positionCount = 3;
-        lineRenderer.SetPosition(0 , myGrafo.allNode.GetNodeAtPosition(9).transform.position); 
-        lineRenderer.SetPosition(1 , myGrafo.allNode.GetNodeAtPosition(10).transform.position); 
-        lineRenderer.SetPosition(2 , myGrafo.allNode.GetNodeAtPosition(12).transform.position);
+        lineRenderer.SetPosition(0 , new Vector3(myGrafo.allNode.GetNodeAtPosition(9).transform.position.x,-0.25f,myGrafo.allNode.GetNodeAtPosition(9).transform.position.z)); 
+        lineRenderer.SetPosition(1 , new Vector3(myGrafo.allNode.GetNodeAtPosition(10).transform.position.x,-0.25f,myGrafo.allNode.GetNodeAtPosition(10).transform.position.z)); 
+        lineRenderer.SetPosition(2 , new Vector3(myGrafo.allNode.GetNodeAtPosition(12).transform.position.x,-0.25f,myGrafo.allNode.GetNodeAtPosition(12).transform.position.z));
     }
-    void LineDerechaEtapa1(){
+    public void LineDerechaEtapa1(){
         lineRenderer.positionCount = 8;
-        lineRenderer.SetPosition(0 , myGrafo.allNode.GetNodeAtPosition(23).transform.position); 
-        lineRenderer.SetPosition(1 , myGrafo.allNode.GetNodeAtPosition(25).transform.position); 
-        lineRenderer.SetPosition(2 , myGrafo.allNode.GetNodeAtPosition(26).transform.position);
-        lineRenderer.SetPosition(3 , myGrafo.allNode.GetNodeAtPosition(27).transform.position);
-        lineRenderer.SetPosition(4 , myGrafo.allNode.GetNodeAtPosition(28).transform.position);
-        lineRenderer.SetPosition(5 , myGrafo.allNode.GetNodeAtPosition(29).transform.position);
-        lineRenderer.SetPosition(6 , myGrafo.allNode.GetNodeAtPosition(30).transform.position);
-        lineRenderer.SetPosition(7 , myGrafo.allNode.GetNodeAtPosition(32).transform.position);
+        lineRenderer.SetPosition(0 , new Vector3(myGrafo.allNode.GetNodeAtPosition(23).transform.position.x,-0.25f,myGrafo.allNode.GetNodeAtPosition(23).transform.position.z)); 
+        lineRenderer.SetPosition(1 , new Vector3(myGrafo.allNode.GetNodeAtPosition(25).transform.position.x,-0.25f,myGrafo.allNode.GetNodeAtPosition(25).transform.position.z)); 
+        lineRenderer.SetPosition(2 , new Vector3(myGrafo.allNode.GetNodeAtPosition(26).transform.position.x,-0.25f,myGrafo.allNode.GetNodeAtPosition(26).transform.position.z));
+        lineRenderer.SetPosition(3 , new Vector3(myGrafo.allNode.GetNodeAtPosition(27).transform.position.x,-0.25f,myGrafo.allNode.GetNodeAtPosition(27).transform.position.z));
+        lineRenderer.SetPosition(4 , new Vector3(myGrafo.allNode.GetNodeAtPosition(28).transform.position.x,-0.25f,myGrafo.allNode.GetNodeAtPosition(28).transform.position.z));
+        lineRenderer.SetPosition(5 , new Vector3(myGrafo.allNode.GetNodeAtPosition(29).transform.position.x,-0.25f,myGrafo.allNode.GetNodeAtPosition(29).transform.position.z));
+        lineRenderer.SetPosition(6 , new Vector3(myGrafo.allNode.GetNodeAtPosition(31).transform.position.x,-0.25f,myGrafo.allNode.GetNodeAtPosition(31).transform.position.z));
+        lineRenderer.SetPosition(7 , new Vector3(myGrafo.allNode.GetNodeAtPosition(32).transform.position.x,-0.25f,myGrafo.allNode.GetNodeAtPosition(32).transform.position.z));
     }
 }
+
+

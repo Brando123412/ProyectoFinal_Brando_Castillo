@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SaveTropas", menuName = "ScriptableObjects/SaveTropas", order = 0)]
 public class SaveTropas : ScriptableObject
 {
-    int faseSelecction = 1;
+    public int faseSelecction = 0;
     MyQueue<Unid> myCola /*= new MyQueue<Unid>()*/;
     public List<Unid> prueba2;
     
@@ -24,5 +24,8 @@ public class SaveTropas : ScriptableObject
         }else{
             return default(Unid);
         }
+    }
+    public int CountQueue(){
+        return myCola.Count;
     }
 }

@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f60638c6dd8a66347b8a6038bf985a6a, type: 3}
   m_Name: SOTropas
   m_EditorClassIdentifier: 
+  faseSelecction: 0
   prueba2:
   - {fileID: 89170106328656562, guid: a13e8177e7475d84dbaabc75491e2f6e, type: 3}
+  - {fileID: 8203049989244257350, guid: fe8f8a73f95aaec4d9fe96eca4274955, type: 3}
+  - {fileID: 8203049989244257350, guid: fe8f8a73f95aaec4d9fe96eca4274955, type: 3}
+  - {fileID: 8203049989244257350, guid: fe8f8a73f95aaec4d9fe96eca4274955, type: 3}
