@@ -5,17 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Vector3 vectorToMove;
-    [SerializeField] int speed;
-    [SerializeField] private MaterialController material;
+    [SerializeField] float speed;
     Rigidbody rb;
-    //MyGrafo mygrafo;
+    [SerializeField] MaterialPlayer materialPlayer;
+
     void Awake()
     {
         rb=GetComponent<Rigidbody>();
     }
-    /*void Start(){
-        mygrafo.SeleccionCamino1(gameObject);
-    }*/
     public void GoToNode(MyGrafo mygrafo, SaveTropas value){
         if(value.faseSelecction==0){
             mygrafo.SeleccionCamino1(gameObject);
@@ -35,25 +32,19 @@ public class PlayerController : MonoBehaviour
     public void ChangeMovePosition(Vector3 destiny){
         vectorToMove = destiny;
     }
-    IEnumerator ColorEmision(){
-        yield return new WaitForSeconds(1);
-        material.ChangeEmissionColor(MaterialChange.Normal);
-    }
     void OnTriggerExit(Collider other){
         if(other.CompareTag("OnGoOut"))
         { 
-            material.ChangeEmissionColor(MaterialChange.OnGoOut);
-            StartCoroutine(ColorEmision());
+            materialPlayer.OnGoOut();
         }
         if(other.CompareTag("OnEntry"))
         { 
-            material.ChangeEmissionColor(MaterialChange.OnEntry);
-            StartCoroutine(ColorEmision());
+            materialPlayer.OnEntry();
         }
         if(other.CompareTag("Enemy"))
         { 
-            material.ChangeEmissionColor(MaterialChange.Onhit);
-            StartCoroutine(ColorEmision());
+            materialPlayer.Enemy();
+            Destroy(other.gameObject);
         }
     }
 }

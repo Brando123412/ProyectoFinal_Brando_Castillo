@@ -10,9 +10,14 @@ public class EnemyControler : MonoBehaviour
     GameObject currenttropaPositionAddDate;
     Vector3 prueba;
     [SerializeField]Soundscriptableobjects SoundBala;
-    private bool canShoot = false;//Condicion para disparar
+    bool canShoot;
+    bool condition;
+    [SerializeField] float velocityShoot;
+    [SerializeField] float velocityBala;
     void Awake(){
         saveBullet=Instantiate(saveBullet,new Vector3(0,0,0),transform.rotation);
+        canShoot=false;
+        condition=false;
     }
     void Start()
     {
@@ -21,11 +26,11 @@ public class EnemyControler : MonoBehaviour
     void Update()
     {
         if(canShoot == true){
+            canShoot =false;
             if(currenttropaPosition==null){
                 currenttropaPosition = currenttropaPositionAddDate;
             }
             StartCoroutine(ShootBullet());
-            canShoot =false;
         }
         if(currenttropaPosition!=null){
             transform.LookAt(currenttropaPosition.transform);
@@ -36,28 +41,19 @@ public class EnemyControler : MonoBehaviour
     IEnumerator ShootBullet(){
         if(currenttropaPosition != null){
             prueba = (currenttropaPosition.gameObject.transform.position-transform.position).normalized*2;
-            Instantiate(bullet, transform.position, transform.rotation,saveBullet.transform).SetUpVelocity(prueba,SoundBala);
-            yield return new WaitForSecondsRealtime(0.5f);
-            canShoot = true;
+            Instantiate(bullet, transform.position, transform.rotation,saveBullet.transform).SetUpVelocity(prueba,SoundBala,velocityBala);
         }
-        /*prueba = (currenttropaPosition.gameObject.transform.position-transform.position).normalized*2;
-        Instantiate(bullet, transform.position, transform.rotation,saveBullet.transform).SetUpVelocity(prueba,SoundBala);
-        yield return new WaitForSecondsRealtime(0.1f);
-        canShoot = true;*/
+        yield return new WaitForSecondsRealtime(velocityShoot);
+        canShoot = true;
     }
     private void OnTriggerEnter(Collider other){
         if(other.CompareTag("Tropa")){
             currenttropaPositionAddDate = other.gameObject;
-            canShoot = true;
-            /*if(currenttropaPosition==null){
-                currenttropaPosition = other.gameObject;
+            if(condition ==false){
                 canShoot = true;
-            }*/
-
-            //currenttropaPosition = other.gameObject;
-            //canShoot = true;
-            //prueba = (currenttropaPosition.gameObject.transform.position-transform.position).normalized*2;
-            //Instantiate(bullet,transform.position,transform.rotation,saveBullet.transform).SetUpVelocity(prueba,SoundBala);;
+            }
+            condition=true;
+            
         }
     }
     private void OnTriggerExit(Collider other)

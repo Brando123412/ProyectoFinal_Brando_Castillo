@@ -119,3 +119,5 @@ MonoBehaviour:
   bullet: {fileID: 7900895134291029765, guid: 93013c45b0d6989458df7017d52ab42a, type: 3}
   saveBullet: {fileID: 113690583063798197, guid: ff4c5235b6059124094d779a4b44237e, type: 3}
   SoundBala: {fileID: 11400000, guid: ad40e62e4bc2b4f47ae3e9bcfb18aacf, type: 2}
+  velocityShoot: 2
+  velocityBala: 1

@@ -5,14 +5,11 @@ using UnityEngine;
 public class BulletAtaqueAngular : MonoBehaviour
 {
     Rigidbody rb;
-    [SerializeField] private Transform target;//Transform de la t
-    [SerializeField]  float velocityMultiplier;
+    private Transform target;//Transform de la t
     [SerializeField]  int damage;
     //Prueba
     [SerializeField] private float max_H ;
-	[SerializeField] private float custom_Gravity = -18;
-
-
+	[SerializeField] private float custom_Gravity ;
     
     void Awake()
     {
@@ -24,9 +21,8 @@ public class BulletAtaqueAngular : MonoBehaviour
 
     ////////////////////
     public void Launch(Vector3 tropaPosition,Soundscriptableobjects soundSO){
-        GameObject targetObject = new GameObject("Target"); // Crea un nuevo objeto vacío
-        target = targetObject.transform; // Asigna el componente Transform del nuevo objeto a la variable target
-
+        GameObject targetObject = new GameObject("Target"); 
+        target = targetObject.transform; 
         target.position = tropaPosition;
         soundSO.CreateSound();
 		Physics.gravity = Vector3.up * custom_Gravity;
@@ -53,18 +49,11 @@ public class BulletAtaqueAngular : MonoBehaviour
 			this.timeToTarget = timeToTarget;
 		}
 		
-	}/////////////////////////
+	}
     IEnumerator OndestroyBullet(){
         yield return new WaitForSecondsRealtime(10f);
         if(gameObject != null){
             Destroy(gameObject);
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Tropa")){
-            Destroy(gameObject);
-            Debug.Log("Me destruyo solo");
         }
     }
 }

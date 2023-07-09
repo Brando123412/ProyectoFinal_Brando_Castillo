@@ -8,11 +8,15 @@ public class EnemyataqueAngular : MonoBehaviour
     [SerializeField]GameObject saveBullet;
     [SerializeField]GameObject currenttropaPosition;
     GameObject currenttropaPositionAddDate;
-    Vector3 prueba;
     [SerializeField]Soundscriptableobjects SoundBala;
-    private bool canShoot = false;
+    [SerializeField] Transform puntodisparo;
+    bool canShoot;
+    bool condition;
+    [SerializeField] float velocityShoot;
     void Awake(){
         saveBullet=Instantiate(saveBullet,new Vector3(0,0,0),Quaternion.identity);
+        canShoot=false;
+        condition=false;
     }
     void Start()
     {
@@ -20,30 +24,31 @@ public class EnemyataqueAngular : MonoBehaviour
     void Update()
     {
         if(canShoot == true){
+            canShoot =false;
             if(currenttropaPosition==null){
                 currenttropaPosition = currenttropaPositionAddDate;
             }
-            canShoot =false;
             StartCoroutine(ShootBullet());
         }
         if(currenttropaPosition!=null){
             transform.LookAt(currenttropaPosition.transform);
-        }
-        
+        }   
     }
 
     IEnumerator ShootBullet(){
         if(currenttropaPosition != null){
-            ///prueba = (currenttropaPosition.transform.position-transform.position).normalized*2;
-            Instantiate(bullet, transform.position, transform.rotation,saveBullet.transform).Launch(currenttropaPosition.transform.position,SoundBala);
-            yield return new WaitForSecondsRealtime(0.5f);
-            canShoot = true;
+            Instantiate(bullet, puntodisparo.position, transform.rotation,saveBullet.transform).Launch(currenttropaPosition.transform.position,SoundBala);
         }
+        yield return new WaitForSecondsRealtime(velocityShoot);
+            canShoot = true;
     }
     private void OnTriggerEnter(Collider other){
         if(other.CompareTag("Tropa")){
             currenttropaPositionAddDate = other.gameObject;
-            canShoot = true;
+            if(condition ==false){
+                canShoot = true;
+            }
+            condition=true;
         }
     }
     private void OnTriggerExit(Collider other)

@@ -7598,10 +7598,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 746926364900341743, guid: 7a4c2d7e254b007468436a8aaacd0021, type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 746926365196541528, guid: 7a4c2d7e254b007468436a8aaacd0021, type: 3}
-      propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

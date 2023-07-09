@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5272997944391237136}
   m_Layer: 0
   m_Name: BalaAngular2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,11 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc44b98b92b03e54ca546982943fab36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  velocityMultiplier: 0
   damage: 0
-  max_H: 5
-  custom_Gravity: -5
+  max_H: 0.5
+  custom_Gravity: -10
 --- !u!54 &-5272997944391237136
 Rigidbody:
   m_ObjectHideFlags: 0

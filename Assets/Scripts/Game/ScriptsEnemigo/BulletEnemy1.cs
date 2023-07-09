@@ -15,8 +15,8 @@ public class BulletEnemy1 : MonoBehaviour
     void Start(){
         StartCoroutine(OndestroyBullet());
     }
-    public void SetUpVelocity(Vector3 velocity,Soundscriptableobjects myAudioSO){
-        rb.velocity = velocity * velocityMultiplier;
+    public void SetUpVelocity(Vector3 velocity,Soundscriptableobjects myAudioSO, float velocityfloat){
+        rb.velocity = velocity * velocityMultiplier*velocityfloat;
         myAudioSO.CreateSound();
         //DamageManager.instance.SubscribeFunction(this);
     }
@@ -24,13 +24,6 @@ public class BulletEnemy1 : MonoBehaviour
         yield return new WaitForSecondsRealtime(10f);
         if(gameObject != null){
             Destroy(gameObject);
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Tropa")){
-            Destroy(gameObject);
-            Debug.Log("Me destruyo solo");
         }
     }
 
