@@ -6,10 +6,10 @@ using UnityEngine.InputSystem;
 [CreateAssetMenu(fileName = "MaterialController", menuName = "ScriptableObjects/MaterialController", order = 0)]
 public class MaterialController : ScriptableObject
 {
-    [SerializeField] private Material material;
+    //[SerializeField] private Material material;
     [SerializeField] private Color[] emissionsColors;
     
-    public void ChangeEmissionColor(MaterialChange typeChange){
+    public void ChangeEmissionColor(MaterialChange typeChange,Material material){
         switch (typeChange)
         {
             case MaterialChange.OnGoOut:

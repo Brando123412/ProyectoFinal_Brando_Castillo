@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject[] currentPositionsNodeStart;
     bool drop =true;
     int cantidadTropas;
+
+    [SerializeField] InsertionSort savepuntaje;
     [SerializeField] Button buttonDrop;
     [SerializeField] Button buttonSiguiente;
     [SerializeField] GameObject[] paneles;
@@ -30,14 +32,6 @@ public class GameController : MonoBehaviour
         }
         Instance = this;
         cantidadTropas=0;
-
-        /*if(saveTropasSO.faseSelecction ==0){
-            Fase1();
-        }else if(saveTropasSO.faseSelecction ==1){
-            Fase2();
-        }else if(saveTropasSO.faseSelecction ==2){
-            Fase3();
-        }*/
     }
 
     void Start()
@@ -55,6 +49,7 @@ public class GameController : MonoBehaviour
     }
     public void IrAMenu(){
         SceneManagerController.Instance.LoadScene("Menu");
+        Time.timeScale = 1f;
     }
     public void Pause(){
         panelMenu.SetActive(true);
@@ -91,10 +86,12 @@ public class GameController : MonoBehaviour
         }
     }
     IEnumerator DropTropCorutine(){
+        GameObject tropa= new GameObject();
         Unid tmpTropa= saveTropasSO.ReturmTropas();
+        tropa = tmpTropa.prefab;
         Debug.Log(tmpTropa);
         if(tmpTropa != null){ 
-            Instantiate(tmpTropa.prefab, currentPositionsNodeStart[saveTropasSO.faseSelecction].transform.position,transform.rotation).GetComponent<PlayerController>().GoToNode(myGrafo,saveTropasSO);
+            Instantiate(tropa, currentPositionsNodeStart[saveTropasSO.faseSelecction].transform.position,transform.rotation).GetComponent<PlayerController>().GoToNode(myGrafo,saveTropasSO);
         }
         yield return new WaitForSecondsRealtime(2);
         drop = true;
@@ -106,10 +103,17 @@ public class GameController : MonoBehaviour
             }else{
                 saveTropasSO.faseSelecction=0;
             }
+            if(saveTropasSO.faseSelecction==2){
+                savepuntaje.SavePuntaje(savepuntaje.puntajeAcumulado);
+                savepuntaje.puntajeAcumulado =0;
+            }
             OnWin();
+            savepuntaje.puntajeAcumulado=savepuntaje.puntajeAcumulado = cantidadTropas;
         }else{
             saveTropasSO.faseSelecction=0;
             OnLose();
+            savepuntaje.SavePuntaje(savepuntaje.puntajeAcumulado);
+            savepuntaje.puntajeAcumulado =0;
         }
     }
     IEnumerator ReferenciaAlbottonsiguiente(){

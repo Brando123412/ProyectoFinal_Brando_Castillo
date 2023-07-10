@@ -105,7 +105,7 @@ CapsuleCollider:
   m_Radius: 8.84
   m_Height: 2.86
   m_Direction: 1
-  m_Center: {x: 0.000009179115, y: 7.411538e-20, z: -0.00000062584877}
+  m_Center: {x: 0.000009179115, y: -3.05, z: -0.00000062584877}
 --- !u!114 &164727847646989073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,4 +120,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 7900895134291029765, guid: 93013c45b0d6989458df7017d52ab42a, type: 3}
   saveBullet: {fileID: 113690583063798197, guid: ff4c5235b6059124094d779a4b44237e, type: 3}
+  currenttropaPosition:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   SoundBala: {fileID: 11400000, guid: ad40e62e4bc2b4f47ae3e9bcfb18aacf, type: 2}
+  velocityShoot: 0.5
+  velocityBala: 20

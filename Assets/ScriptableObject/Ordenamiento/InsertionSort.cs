@@ -7,8 +7,10 @@ public class InsertionSort : ScriptableObject
 {
     int[] puntajes = new int[10];
     public int j=0;
+    public int puntajeAcumulado=0;
     public void SavePuntaje(int puntajeValue){
-        if(j < 10){
+        if(j < 10) 
+        {
             for (int i = 0; i < puntajes.Length; i++)
             {
                 if(puntajes[i] == 0){

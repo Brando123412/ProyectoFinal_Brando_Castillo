@@ -10,6 +10,9 @@ TagManager:
   - OnGoOut
   - OnEntry
   - AreaJuego
+  - Enemy2
+  - Mina
+  - TropaEspecial
   layers:
   - Default
   - TransparentFX

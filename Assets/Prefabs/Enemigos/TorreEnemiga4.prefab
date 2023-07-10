@@ -105,7 +105,7 @@ CapsuleCollider:
   m_Radius: 6.91
   m_Height: 2.86
   m_Direction: 1
-  m_Center: {x: 0.000009179115, y: 7.411538e-20, z: -0.00000062584877}
+  m_Center: {x: 0.000009179115, y: -3.1, z: -0.00000062584877}
 --- !u!114 &1752315483011551426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,4 +121,5 @@ MonoBehaviour:
   bullet: {fileID: 7900895134291029765, guid: 93013c45b0d6989458df7017d52ab42a, type: 3}
   saveBullet: {fileID: 113690583063798197, guid: ff4c5235b6059124094d779a4b44237e, type: 3}
   SoundBala: {fileID: 11400000, guid: ad40e62e4bc2b4f47ae3e9bcfb18aacf, type: 2}
-  velocityShoot: 0
+  velocityShoot: 0.5
+  velocityBala: 20

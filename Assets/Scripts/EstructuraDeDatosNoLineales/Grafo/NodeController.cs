@@ -30,7 +30,7 @@ public class NodeController : MonoBehaviour
         return allAdjacentesNodes.GetNodeAtPosition(nodeSelect);
     }
     void OnTriggerEnter(Collider other){
-        if(other.gameObject.tag == "Tropa"){
+        if(other.gameObject.tag == "Tropa" ){
             other.GetComponent<PlayerController>().ChangeMovePosition(SelectNextNode().gameObject.transform.position);
         }
     }
