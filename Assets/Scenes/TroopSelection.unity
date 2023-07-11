@@ -2397,7 +2397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 746926364900341743, guid: 7a4c2d7e254b007468436a8aaacd0021, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a4c2d7e254b007468436a8aaacd0021, type: 3}
@@ -2593,7 +2593,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d47472c8cb2613943acecbed0abeff23, type: 3}
+  m_Sprite: {fileID: -659733526, guid: d47472c8cb2613943acecbed0abeff23, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3638,7 +3638,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 905f9a9f4e285324885d060b56a4ace4, type: 3}
+  m_Sprite: {fileID: -1062678502, guid: 905f9a9f4e285324885d060b56a4ace4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4101,6 +4101,7 @@ GameObject:
   - component: {fileID: 1332274203}
   - component: {fileID: 1332274202}
   - component: {fileID: 1332274204}
+  - component: {fileID: 1332274205}
   m_Layer: 5
   m_Name: Tropa2Button
   m_TagString: Untagged
@@ -4235,6 +4236,26 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!95 &1332274205
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332274200}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1343308337
 GameObject:
   m_ObjectHideFlags: 0
@@ -4270,7 +4291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -128}
+  m_AnchoredPosition: {x: 0, y: -175}
   m_SizeDelta: {x: 262.95, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343308339
@@ -4663,6 +4684,7 @@ GameObject:
   - component: {fileID: 1444492356}
   - component: {fileID: 1444492355}
   - component: {fileID: 1444492357}
+  - component: {fileID: 1444492358}
   m_Layer: 5
   m_Name: Tropa5Button
   m_TagString: Untagged
@@ -4688,8 +4710,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -240, y: -272}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: -255, y: -219}
+  m_SizeDelta: {x: 266.2337, y: 312}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1444492355
 MonoBehaviour:
@@ -4797,6 +4819,26 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!95 &1444492358
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444492353}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d69173c9cf81ec8459d7e12f45dbf0a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1445740404
 GameObject:
   m_ObjectHideFlags: 0
@@ -5165,7 +5207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a69170f0fdef6924aa729a8b89c3a7ab, type: 3}
+  m_Sprite: {fileID: 185408171, guid: a69170f0fdef6924aa729a8b89c3a7ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5915,7 +5957,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ebea1f322ebbb18439a7a41269afa9e9, type: 3}
+  m_Sprite: {fileID: 496064107, guid: ebea1f322ebbb18439a7a41269afa9e9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6177,6 +6219,7 @@ GameObject:
   - component: {fileID: 1849461304}
   - component: {fileID: 1849461303}
   - component: {fileID: 1849461305}
+  - component: {fileID: 1849461306}
   m_Layer: 5
   m_Name: Tropa4Button
   m_TagString: Untagged
@@ -6311,6 +6354,26 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!95 &1849461306
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849461301}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 70df2f9d08a71264c803b7c53687c96f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1853361832
 GameObject:
   m_ObjectHideFlags: 0
@@ -6632,7 +6695,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -240, y: 150}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 200, y: 155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956520670
 MonoBehaviour:

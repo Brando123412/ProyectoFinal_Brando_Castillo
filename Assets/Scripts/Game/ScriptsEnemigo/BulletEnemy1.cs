@@ -18,7 +18,6 @@ public class BulletEnemy1 : MonoBehaviour
     public void SetUpVelocity(Vector3 velocity,Soundscriptableobjects myAudioSO, float velocityfloat){
         rb.velocity = velocity * velocityMultiplier*velocityfloat;
         myAudioSO.CreateSound();
-        //DamageManager.instance.SubscribeFunction(this);
     }
     IEnumerator OndestroyBullet(){
         yield return new WaitForSecondsRealtime(10f);

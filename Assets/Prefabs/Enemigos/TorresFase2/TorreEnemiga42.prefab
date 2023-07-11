@@ -146,6 +146,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  SoundBala: {fileID: 11400000, guid: ad40e62e4bc2b4f47ae3e9bcfb18aacf, type: 2}
+  SoundBala: {fileID: 11400000, guid: db0889518dcc9514e98b074ad643af13, type: 2}
   velocityShoot: 0.5
   velocityBala: 20

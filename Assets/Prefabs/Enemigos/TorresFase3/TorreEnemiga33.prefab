@@ -95,7 +95,7 @@ MonoBehaviour:
   bullet: {fileID: 2147244182669627258, guid: 852ee0691e975e34586483342b6ff9d0, type: 3}
   saveBullet: {fileID: 113690583063798197, guid: ff4c5235b6059124094d779a4b44237e, type: 3}
   currenttropaPosition: {fileID: 0}
-  SoundBala: {fileID: 11400000, guid: ad40e62e4bc2b4f47ae3e9bcfb18aacf, type: 2}
+  SoundBala: {fileID: 11400000, guid: eba5307d5ee1de841b60357e089152dc, type: 2}
   puntodisparo: {fileID: 5335671176242273445}
   velocityShoot: 2
 --- !u!1001 &2229375520954410730

@@ -17,6 +17,6 @@ MonoBehaviour:
   myMixer: {fileID: 24100000, guid: aba11227706d57348ae5bfb430a2b816, type: 2}
   valueVolume: 74
   buttonMute:
-  - {fileID: 21300000, guid: 9a4ae1105c5c9aa45944304e9cf6580e, type: 3}
-  - {fileID: 21300000, guid: 0140a0d0cedce2342bb550edde1cc10a, type: 3}
+  - {fileID: -1862474099, guid: 9a4ae1105c5c9aa45944304e9cf6580e, type: 3}
+  - {fileID: -1291924753, guid: 0140a0d0cedce2342bb550edde1cc10a, type: 3}
   isMuted: 0
