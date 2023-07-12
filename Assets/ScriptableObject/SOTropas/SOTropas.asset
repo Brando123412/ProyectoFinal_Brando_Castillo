@@ -12,27 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f60638c6dd8a66347b8a6038bf985a6a, type: 3}
   m_Name: SOTropas
   m_EditorClassIdentifier: 
-  faseSelecction: 0
+  faseSelecction: 1
   prueba2:
   - {fileID: 2570971916025217075, guid: b7e22cce1c995c447b120617098fee79, type: 3}
   - {fileID: 4760313857810403929, guid: e6caacd7c35a88747b5efed38bef2de0, type: 3}
+  - {fileID: 2924477213583501338, guid: 929e47fd6f79e20448ad84ad2cf56f2d, type: 3}
   - {fileID: 5564459389006450024, guid: 9118b7f5eef299c40963392c14b333ab, type: 3}
-  - {fileID: 2404222650558355266, guid: 3a2b8d4b62b8f6246b77b1bf9f548585, type: 3}
-  - {fileID: 8203049989244257350, guid: fe8f8a73f95aaec4d9fe96eca4274955, type: 3}
   - {fileID: 89170106328656562, guid: a13e8177e7475d84dbaabc75491e2f6e, type: 3}
-  - {fileID: 89170106328656562, guid: a13e8177e7475d84dbaabc75491e2f6e, type: 3}
-  - {fileID: 8203049989244257350, guid: fe8f8a73f95aaec4d9fe96eca4274955, type: 3}
-  - {fileID: 2404222650558355266, guid: 3a2b8d4b62b8f6246b77b1bf9f548585, type: 3}
-  - {fileID: 2404222650558355266, guid: 3a2b8d4b62b8f6246b77b1bf9f548585, type: 3}
-  - {fileID: 2404222650558355266, guid: 3a2b8d4b62b8f6246b77b1bf9f548585, type: 3}
-  - {fileID: 8203049989244257350, guid: fe8f8a73f95aaec4d9fe96eca4274955, type: 3}
-  - {fileID: 8203049989244257350, guid: fe8f8a73f95aaec4d9fe96eca4274955, type: 3}
-  - {fileID: 89170106328656562, guid: a13e8177e7475d84dbaabc75491e2f6e, type: 3}
-  - {fileID: 89170106328656562, guid: a13e8177e7475d84dbaabc75491e2f6e, type: 3}
-  - {fileID: 2570971916025217075, guid: b7e22cce1c995c447b120617098fee79, type: 3}
-  - {fileID: 5564459389006450024, guid: 9118b7f5eef299c40963392c14b333ab, type: 3}
-  - {fileID: 5564459389006450024, guid: 9118b7f5eef299c40963392c14b333ab, type: 3}
-  - {fileID: 2570971916025217075, guid: b7e22cce1c995c447b120617098fee79, type: 3}
-  - {fileID: 2570971916025217075, guid: b7e22cce1c995c447b120617098fee79, type: 3}
   - {fileID: 8203049989244257350, guid: fe8f8a73f95aaec4d9fe96eca4274955, type: 3}
   - {fileID: 2404222650558355266, guid: 3a2b8d4b62b8f6246b77b1bf9f548585, type: 3}

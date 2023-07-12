@@ -68,7 +68,6 @@ public class GameController : MonoBehaviour
         StartCoroutine(Carga(paneles[1],"TroopSelection"));
     }
     private IEnumerator Carga(GameObject panel,string Scena){
-        yield return new WaitForSecondsRealtime(1);
         panel.SetActive(true);
         yield return new WaitForSecondsRealtime(5);
         SceneManagerController.Instance.LoadScene(Scena);

@@ -6,7 +6,7 @@ public class EnemyControllerMultipleAtaque : MonoBehaviour
 {
     [SerializeField] BulletEnemy1 bullet;
     [SerializeField] GameObject saveBullet;
-    [SerializeField]GameObject[] currenttropaPosition  = new GameObject[25];
+    [SerializeField]GameObject[] currenttropaPosition  = new GameObject[10];
     Vector3 prueba;
     [SerializeField]Soundscriptableobjects SoundBala;
     bool canShoot=false;
